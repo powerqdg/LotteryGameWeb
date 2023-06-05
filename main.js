@@ -165,3 +165,16 @@ function miniGameSixmog() {
 
   document.querySelector('.section').appendChild(rowElement);
 }
+
+const gameResultBtn = document.querySelector('.header > .row2 .gameResult');
+gameResultBtn.addEventListener('click', (e) => {
+  flogJSONData();
+});
+
+async function logJSONData() {
+  const response = await fetch(
+    'https://dhlottery.co.kr/gameResult.do?method=byWin'
+  );
+  const jsonData = await response.json();
+  console.log(jsonData);
+}
