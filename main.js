@@ -173,7 +173,7 @@ gameResultBtn.addEventListener('click', (e) => {
 
 async function logJSONData() {
   const response = await fetch(
-    'https://dhlottery.co.kr/gameResult.do?method=byWin'
+    'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1070'
   );
   const jsonData = await response.json();
   console.log(jsonData);
