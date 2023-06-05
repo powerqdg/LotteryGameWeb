@@ -168,7 +168,7 @@ function miniGameSixmog() {
 
 const gameResultBtn = document.querySelector('.header > .row2 .gameResult');
 gameResultBtn.addEventListener('click', (e) => {
-  flogJSONData();
+  logJSONData();
 });
 
 async function logJSONData() {
