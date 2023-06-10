@@ -20,29 +20,7 @@
     <script defer src="./lottoResult.js"></script>
     <script defer src="./main.js"></script>
     <script>
-      document.documentElement.addEventListener(
-        'touchstart',
-        function (event) {
-          if (event.touches.length > 1) {
-            event.preventDefault();
-          }
-        },
-        false
-      );
-
-      var lastTouchEnd = 0;
-
-      document.documentElement.addEventListener(
-        'touchend',
-        function (event) {
-          var now = new Date().getTime();
-          if (now - lastTouchEnd <= 300) {
-            event.preventDefault();
-          }
-          lastTouchEnd = now;
-        },
-        false
-      );
+      window.document.onselectstart = new Function('return false'); //더블클릭시 선택되지 않게
     </script>
   </head>
   <body>
