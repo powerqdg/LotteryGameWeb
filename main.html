@@ -19,31 +19,6 @@
     <link rel="stylesheet" href="main.css" />
     <script defer src="./lottoResult.js"></script>
     <script defer src="./main.js"></script>
-    <script>
-      document.documentElement.addEventListener(
-        'touchstart',
-        function (event) {
-          if (event.touches.length > 1) {
-            event.preventDefault();
-          }
-        },
-        false
-      );
-
-      var lastTouchEnd = 0;
-
-      document.documentElement.addEventListener(
-        'touchend',
-        function (event) {
-          var now = new Date().getTime();
-          if (now - lastTouchEnd <= 300) {
-            event.preventDefault();
-          }
-          lastTouchEnd = now;
-        },
-        false
-      );
-    </script>
   </head>
   <body>
     <div class="container">
