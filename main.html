@@ -17,6 +17,7 @@
     />
     <script src="./js/com/jquery/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="main.css" />
+    <script defer src="./lottoResult.js"></script>
     <script defer src="./main.js"></script>
   </head>
   <body>
@@ -82,14 +83,7 @@
             <!-- prettier-ignore -->
             <label class="btn btn-outline-secondary btn-sm" for="gameCount5">5게임</label>
             <div class="btn-group col-3" role="group" aria-label="Second group">
-              <button type="button" class="btn btn-dark generate">
-                <span class="generateText">생성</span>
-                <div
-                  class="spinner-border spinner-border-sm ms-auto generateSpinner hidden"
-                  role="status"
-                  aria-hidden="true"
-                ></div>
-              </button>
+              <button type="button" class="btn btn-dark generate">생성</button>
             </div>
           </div>
         </div>
@@ -109,15 +103,15 @@
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
               <li>
                 <!-- prettier-ignore -->
+                <a class="dropdown-item miniGame" data-mini-game="miniGame3" href="#">미니오델로</a>
+              </li>
+              <li>
+                <!-- prettier-ignore -->
                 <a class="dropdown-item miniGame" data-mini-game="miniGame1" href="#">카드뒤집기</a>
               </li>
               <li>
                 <!-- prettier-ignore -->
                 <a class="dropdown-item miniGame" data-mini-game="miniGame2" href="#">과녁맞추기</a>
-              </li>
-              <li>
-                <!-- prettier-ignore -->
-                <a class="dropdown-item miniGame" data-mini-game="miniGame3" href="#">육목</a>
               </li>
             </ul>
             <button type="button" class="btn btn-warning btn-sm gameResult">
@@ -128,7 +122,7 @@
         </div>
       </div>
 
-      <div style="height: 50px"></div>
+      <div style="height: 1.5em"></div>
 
       <!-- section -->
       <div class="section"></div>

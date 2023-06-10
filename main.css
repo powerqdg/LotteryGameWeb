@@ -4,8 +4,15 @@
   --color-red: #ff7272;
   --color-grey: #aaa;
   --color-green: #b0d840;
+  --body-padding: 0.5em;
+  --container-height: 95vh;
+  --container-border-radius: 1em;
   --section-width: 80%;
   --ball-size: 2.5em;
+  --board-columns-num: 6;
+  --board-columns-size: 3em;
+  --board-rows-num: 6;
+  --board-rows-size: 3em;
 }
 
 .ball-color-yellow {
@@ -29,25 +36,70 @@
   box-shadow: none !important;
 }
 
-.section {
-  width: var(--section-width);
+body {
+  padding: var(--body-padding);
+}
+.container {
+  height: var(--container-height);
+}
+
+.section > div {
   margin: 0 auto;
-  text-align: center;
 }
 .section .ball {
+  text-align: center;
   display: inline-block;
   width: var(--ball-size);
   height: var(--ball-size);
   border-radius: calc(var(--ball-size) / 2);
+  line-height: var(--ball-size);
   font-weight: bold;
   color: #fff;
 }
 
-.header > .row1 label {
+.header > .row1 label,
+.header > .row2 button {
+  font-size: 0.8em;
   font-weight: bold;
   line-height: 2em;
 }
 
+.header > .row2 button {
+  color: #fff;
+}
+
 .hidden {
   display: none;
+}
+
+/* 오델로게임 */
+.board {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--board-columns-num),
+    var(--board-columns-size)
+  );
+  grid-template-rows: repeat(var(--board-rows-num), var(--board-rows-size));
+  width: calc(var(--board-columns-num) * var(--board-columns-size));
+  height: calc(var(--board-rows-num) * var(--board-rows-size));
+}
+.cell {
+  border: 1px solid #000;
+  background-color: #e9a208;
+  cursor: pointer;
+  text-align: center;
+  line-height: var(--board-rows-size);
+  color: orangered;
+  font-weight: bold;
+}
+.cell.black {
+  background-color: #000;
+}
+.cell.white {
+  background-color: #fff;
+}
+.turn {
+  padding-top: 20px;
+  font-weight: bold;
+  text-align: center;
 }
