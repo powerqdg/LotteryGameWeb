@@ -127,7 +127,6 @@ function miniGameShooting() {
   console.log('miniGameShooting');
 }
 function miniGameSixmog() {
-  console.log('miniGameSixmog');
   /*
     게임 룰
     1.돌을 놓을 수 있는 빈 공간이 없을 때 게임이 종료.
